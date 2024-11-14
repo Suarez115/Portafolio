@@ -1,0 +1,49 @@
+{% extends "core/html/index.html" %}
+{% block title %}
+<title>Contact</title>
+{% endblock %}
+{% block content %}
+<section id="contact" class="py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col">
+                <h2 class="display-5 fw-bold">Contáctanos</h2>
+                <p class="text-muted">Nos encantaría saber de ti. Completa el formulario y nos pondremos en contacto lo antes posible.</p>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control" id="name" placeholder="Tu nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Asunto</label>
+                        <input type="text" class="form-control" id="subject" placeholder="Asunto de tu mensaje">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Escribe tu mensaje aquí"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+            <!-- Contact Information -->
+            <div class="col-md-6">
+                <h3 class="fw-bold">Información de Contacto</h3>
+                <p>Si prefieres, puedes contactarnos directamente a través de la siguiente información.</p>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-envelope-fill text-primary"></i> Correo Electrónico: dani.sua.ari.ds@gmail.com</li>
+                    <li><i class="bi bi-phone-fill text-primary"></i> Teléfono: +506 71141625</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

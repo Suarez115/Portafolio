@@ -1,0 +1,44 @@
+ <!-- Sidebar -->
+    <div class="d-flex">
+        <nav class="sidebar flex-column flex-shrink-0 p-3 bg-dark">
+            <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <span class="fs-4">Web personal</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="{% url 'home' %}" class="nav-link {% if request.path == '/' %}active{% endif %}">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'portfolio' %}" class="nav-link {% if request.path == '/portfolio/' %}active{% endif %}">
+                        Portfolio
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'about' %}" class="nav-link {% if request.path == '/about/' %}active{% endif %}">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'contact' %}" class="nav-link {% if request.path == '/contact/' %}active{% endif %}">
+                        Contact
+                    </a>
+                </li>
+                <li>
+                    <div class="dark-mode-toggle" onclick="toggleDarkMode()">
+                        <span id="mode-icon" class="mode-icon">🌞</span>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- <script>
+        // Script para manejar el toggle del sidebar en dispositivos móviles
+        document.querySelector('.sidebar-toggle').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('active');
+            document.querySelector('.content').classList.toggle('active');
+        });
+    </script> -->

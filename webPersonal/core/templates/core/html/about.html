@@ -1,0 +1,35 @@
+{% extends "core/html/index.html" %}
+{% block title %}
+<title>About</title>
+{% endblock %}
+{% block content %}
+<section id="about" class="py-5 bg-light">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col">
+                <h2 class="display-5 fw-bold">Sobre Mí</h2>
+                <p class="text-muted">Informática Empresarial UCR</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <!-- Imagen opcional -->
+            <!-- <div class="col-md-6 text-center">
+                <img src="https://via.placeholder.com/500x400" alt="Mi imagen" class="img-fluid rounded">
+            </div> -->
+
+            <!-- Contenido de texto centrado -->
+            <div class="col-md-8 col-lg-6 text-center mx-auto">
+                <h3 class="fw-bold">Daniel Suárez Arias</h3>
+                <p>
+                    Desde siempre he sentido una profunda conexión con la tecnología. Desde que era pequeño, me fascinaba experimentar con la computadora, lo que no solo despertó mi curiosidad, sino que también me permitió desarrollar habilidades que me han sido muy útiles en mi carrera actual. Hoy, como profesional, mi pasión por la tecnología sigue creciendo, y disfruto profundamente explorando, creando y resolviendo problemas a través de la programación y el desarrollo.
+                </p>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-check-circle-fill text-primary"></i> 2 años de experiencia como desarrollador</li>
+                    <li><i class="bi bi-check-circle-fill text-primary"></i> Comprometido con la excelencia</li>
+                </ul>
+                <a href="{% url 'portfolio' %}" class="btn btn-primary mt-3">Conoce mis proyectos</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

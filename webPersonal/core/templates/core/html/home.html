@@ -1,0 +1,40 @@
+{% extends "core/html/index.html" %}
+{% block title %}
+<title>Daniel Suárez Arias - Desarrollador Web</title>
+{% endblock %}
+{% block content %}
+{% load static %}
+
+
+<header>
+    <h1>Daniel Suárez Arias</h1>
+    <p>Desarrollador Web Full Stack</p>
+    <a href="#contact">Contáctame</a>
+    <a href="{% url 'portfolio' %}" target="_blank">Mis Proyectos</a>
+    <a href="{% static 'core/pdf/cv.pdf' %}" target="_blank">Ver CV</a>
+
+</header>
+
+<section>
+    <h2>¡Hola! Soy Daniel,</h2>
+    <p class="text-center">Apasionado por el desarrollo web y la creación de soluciones personalizadas que combinen diseño y funcionalidad. 
+        Con experiencia en tecnologías como <b>Django</b>, <b>Angular</b>, <b>jQuery</b>,
+        <b>React</b>, <b>AWS</b>, <b>JavaScript</b>, trabajo para crear experiencias digitales efectivas.
+    </p>
+</section>
+
+
+
+<section id="contact">
+    <h2>Contacto</h2>
+    <p>Puedes encontrarme en:</p>
+    <p>Email: <a href="mailto:dani.sua.ari.ds@gmail.com">dani.sua.ari.ds@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/daniel-suárez-arias/" target="_blank">linkedin.com/in/daniel-suárez-arias/</a></p>
+    <p>GitHub: <a href="https://github.com/Suarez115" target="_blank">github.com/Suarez115</a></p>
+</section>
+
+
+
+
+
+{% endblock %}

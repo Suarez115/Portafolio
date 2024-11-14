@@ -1,0 +1,434 @@
+
+
+
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #d1ecf1 !important;
+}
+section{
+  background-color: #aed0d6 !important;
+}
+
+/* Estilos personalizados para el sidebar */
+.container-fluid {
+    background: linear-gradient(to bottom, #343a40, #495057, #6c757d, #adb5bd); /* Degradado de oscuro a claro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    padding: 5px;
+    border-radius: 7px
+}
+
+.title {
+    background: linear-gradient(to bottom, #343a40, #495057, #6c757d, #adb5bd);
+    color: #FFF;
+    text-align: center; /* Centra el texto horizontalmente */
+    padding: 6px 0; /* Agrega un poco de padding para darle espacio vertical */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+    border-radius: 4px
+}
+
+
+.sidebar {
+    height: 100vh;
+    background-color: #343a40;
+    padding-top: 20px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    width: 250px; /* Ancho fijo del sidebar */
+    position: fixed; /* Fija el sidebar */
+    left: 0; /* Asegura que esté en la esquina izquierda */
+    top: 0; /* Desde el inicio de la pantalla */
+    z-index: 1000; /* Asegura que esté encima del contenido */
+}
+
+.sidebar .nav-link {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 15px;
+    padding: 10px 20px; /* Mejor padding para el contenido */
+    display: block; /* Asegura que el link ocupe toda la fila */
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+.sidebar .active {
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+/* Contenido principal */
+.main-content {
+    margin-left: 250px; /* Igual que el ancho del sidebar */
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.footer {
+    background-color: #495057;
+    padding: 2rem 0;
+}
+.footer .social-icons a {
+    margin-right: 1rem;
+    color: #6c757d;
+    text-decoration: none;
+}
+.footer .social-icons a:hover {
+    color: #343a40;
+}
+.card {
+    cursor: grab;
+    margin-bottom: 15px;
+    
+  }
+  .dragging {
+    opacity: 0.5;
+  }
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .card-container .card {
+    width: 18rem;
+  }
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Sidebar ocupa todo el ancho */
+        height: auto;
+        position: relative; /* Se vuelve estático en pantallas pequeñas */
+    }
+
+    .sidebar .nav-link {
+        text-align: center; /* Alineación centrada en pantallas pequeñas */
+    }
+
+    .main-content {
+        margin-left: 0; /* Quita el margen del contenido */
+        padding-top: 10px; /* Añade un margen superior */
+        text-align: center; /* Centra el contenido */
+    }
+
+    .sidebar-toggle {
+        display: block; /* Muestra el botón de toggle */
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+
+    .title {
+        text-align: center; /* Centra el título horizontalmente */
+        margin-top: 20px; /* Añade un margen superior */
+        margin-bottom: 20px; /* Añade un margen inferior */
+        font-size: 24px; /* Tamaño de fuente ajustado para pantallas pequeñas */
+    }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+header {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 4rem 0;
+
+  /* background-image: url("{% static 'core/img/portafolio.png' %}"); Cambia por la ruta de tu imagen */
+  background-size: cover; /* La imagen cubre todo el header */
+  background-position: center; /* Centra la imagen */
+  color: white; /* Para que el texto sea visible sobre la imagen */
+  padding: 100px 0; /* Añade espacio interno en el header */
+  text-align: center; /* Centra el contenido */
+}
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+header a {
+  background-color: #fff;
+  color: #007bff;
+  padding: 0.7rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+section {
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+section h2 {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+section p {
+  font-size: 1.1rem;
+  color: #555;
+}
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  margin-left:200px;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+header a:hover {
+  background: #0056b3; /* Azul más oscuro */
+  color: white; /* Texto en blanco */
+}
+
+/* section:hover {
+  transform: translateY(-5px) scale(1.05); 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+} */
+
+.description {
+  max-height: 4.5em; /* Ajusta según el tamaño de la línea */
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.description.expanded {
+  max-height: none; /* Permitir que la descripción se expanda completamente */
+}
+
+.card {
+  width: 100%; /* Asegura que la tarjeta ocupe el 100% del contenedor */
+}
+
+.card-body a {
+  flex: 1; /* Asegura que ambos botones ocupen el mismo ancho */
+}
+.card {
+  width: 100%; /* Asegura que la tarjeta ocupe el 100% del contenedor */
+  max-width: 400px; /* Limitar el ancho máximo de la tarjeta para pantallas grandes */
+  margin: auto; /* Centrar la tarjeta horizontalmente */
+}
+
+.card-body {
+  overflow: hidden; /* Evitar el desbordamiento del texto */
+}
+
+.card-text {
+  max-height: 60px; /* Limitar la altura de la descripción */
+  overflow: hidden; /* Ocultar el texto que se desborda */
+  text-overflow: ellipsis; /* Agregar puntos suspensivos para el texto cortado */
+}
+
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #212529 !important;
+  color: #f8f9fa !important;
+}
+
+body.dark-mode section {
+  background-color: #343a40 !important;
+  color: #f8f9fa;
+}
+
+body.dark-mode .container-fluid,
+body.dark-mode .title,
+body.dark-mode .sidebar,
+body.dark-mode .footer {
+  background-color: #343a40 !important;
+  color: #f8f9fa !important;
+}
+
+body.dark-mode .sidebar .nav-link {
+  color: #adb5bd;
+}
+
+body.dark-mode .sidebar .nav-link:hover,
+body.dark-mode .sidebar .active {
+  background-color: #0056b3;
+}
+
+body.dark-mode header {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+body.dark-mode footer {
+  background-color: #212529;
+  color: #f8f9fa;
+}
+
+body.dark-mode .card {
+  background-color: #495057;
+  color: #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Estilo del botón circular */
+.dark-mode-toggle {
+  width: 40px;
+  height: 40px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #e0e0e0;
+}
+
+.mode-icon {
+  font-size: 1.2rem; /* Tamaño de icono ajustable */
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .dark-mode-toggle {
+  background-color: #333;
+}
+
+body.dark-mode .mode-icon {
+  color: #ffdd57; /* Cambia el color en modo oscuro */
+}
+
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #212529 !important;
+  color: #f8f9fa !important;
+}
+
+/* Cambiar el color de los elementos con clase text-center a blanco en modo oscuro */
+body.dark-mode .text-center {
+  color: #f8f9fa !important;
+}
+
+body.dark-mode section {
+  background-color: #343a40 !important;
+  color: #f8f9fa;
+}
+
+/* Otros estilos del modo oscuro */
+body.dark-mode .container-fluid,
+body.dark-mode .title,
+body.dark-mode .sidebar,
+body.dark-mode .footer {
+  background-color: #343a40 !important;
+  color: #f8f9fa !important;
+}
+
+body.dark-mode .sidebar .nav-link {
+  color: #adb5bd;
+}
+
+body.dark-mode .sidebar .nav-link:hover,
+body.dark-mode .sidebar .active {
+  background-color: #0056b3
+}
+
+body.dark-mode header {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+body.dark-mode p {
+  /* background-color: #343a40; */
+  color: #f8f9fa;
+}
+
+/* Cambiar el color de los elementos con clase text-muted a blanco en modo oscuro */
+body.dark-mode .text-muted {
+  color: #f8f9fa !important;
+}
+
+
+body.dark-mode footer {
+  background-color: #212529;
+  color: #f8f9fa;
+}
+
+body.dark-mode .card {
+  background-color: #495057;
+  color: #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+/* Estilo del botón circular */
+.dark-mode-toggle {
+  width: 40px;
+  height: 40px;
+  background-color: #343a40; /* Color del sidebar */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #495057;
+}
+
+.mode-icon {
+  font-size: 1.2rem;
+  color: #ffdd57; /* Color del ícono en modo claro */
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .dark-mode-toggle {
+  background-color: #495057; /* Color de fondo del sidebar en modo oscuro */
+}
+
+body.dark-mode .mode-icon {
+  color: #ffdd57; /* Cambia el color del ícono en modo oscuro */
+}
+.card {
+  min-height: 100%; /* Para que todas las tarjetas ocupen la altura completa de su contenedor */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  flex-grow: 1; /* El título se estira para ocupar espacio extra si es necesario */
+}
+
+
+.project-info {
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+.carousel-inner img {
+  max-height: 400px;
+  object-fit: cover;
+}
